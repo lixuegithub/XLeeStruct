@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.snow.structxlee.activity.IntervalActivity;
 import com.snow.structxlee.activity.OrderActivity;
 
 public class MainActivity extends Activity {
@@ -15,10 +16,18 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		Button btn_TabColor = (Button) findViewById(R.id.btn_tabColorPagerIndicator);
+		Button btn_viewPagerRx = (Button) findViewById(R.id.btn_viewPagerRx);
 		btn_TabColor.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Intent intent = new Intent (getApplicationContext(), OrderActivity.class);
+				Intent intent = new Intent (MainActivity.this, OrderActivity.class);
+				startActivity(intent);
+			}
+		});
+		btn_viewPagerRx.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent (MainActivity.this, IntervalActivity.class);
 				startActivity(intent);
 			}
 		});

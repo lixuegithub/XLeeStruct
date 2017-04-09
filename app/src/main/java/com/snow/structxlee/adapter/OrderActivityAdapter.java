@@ -23,7 +23,6 @@ public class OrderActivityAdapter extends FragmentPagerAdapter {
 
 	public OrderActivityAdapter(FragmentManager fm) {
 		super(fm);
-
 	}
 
 	public OrderActivityAdapter(FragmentManager fm,

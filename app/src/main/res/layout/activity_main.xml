@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:padding="9dp">
 
     <Button
@@ -10,6 +11,14 @@
         android:layout_height="wrap_content"
         android:padding="3dp"
         android:text="Test TabColorPagerIndicator !"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btn_viewPagerRx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:text="Test RxJavaImpSlide !"
         android:textSize="18sp" />
 
 </LinearLayout>

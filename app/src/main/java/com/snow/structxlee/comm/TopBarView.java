@@ -241,7 +241,6 @@ public class TopBarView extends RelativeLayout implements OnClickListener {
 
 	/**
 	 * 设置topbar的标题 此方法设置可以滚动的标题栏
-	 *
 	 * @param title
 	 */
 	public void setTitleItem(List<String> titleItem) {
@@ -251,28 +250,22 @@ public class TopBarView extends RelativeLayout implements OnClickListener {
 
 	/**
 	 * 设置左边菜单可见性,文本按钮
-	 *
 	 * @param visiable
 	 * @param text
 	 */
 	public void setLeftMenuVisiable(boolean visiable, String text, int color) {
-
 		if (leftMenuLayout == null)
 			return;
-
 		if (visiable) {
 			leftMenuLayout.setVisibility(View.VISIBLE);
 			TextView title = (TextView) leftMenuLayout
 					.findViewById(R.id.sub_menu_left_text);
 			ImageView imageView = (ImageView) leftMenuLayout
 					.findViewById(R.id.sub_menu_left_image);
-
 			title.setVisibility(View.VISIBLE);
 			title.setText(text);
 			title.setTextColor(mContext.getResources().getColor(color));
-
 			imageView.setVisibility(View.INVISIBLE);
-
 		} else {
 			leftMenuLayout.setVisibility(View.GONE);
 		}
@@ -280,26 +273,21 @@ public class TopBarView extends RelativeLayout implements OnClickListener {
 
 	/**
 	 * 设置左边菜单可见性,文本按钮
-	 *
 	 * @param visiable
 	 * @param text
 	 */
 	public void setLeftMenuVisiable(boolean visiable, int imgRes) {
-
 		if (leftMenuLayout == null)
 			return;
-
 		if (visiable) {
 			leftMenuLayout.setVisibility(View.VISIBLE);
 			TextView title = (TextView) leftMenuLayout
 					.findViewById(R.id.sub_menu_left_text);
 			ImageView imageView = (ImageView) leftMenuLayout
 					.findViewById(R.id.sub_menu_left_image);
-
 			title.setVisibility(View.INVISIBLE);
 			imageView.setVisibility(View.VISIBLE);
 			imageView.setImageResource(imgRes);
-
 		} else {
 			leftMenuLayout.setVisibility(View.GONE);
 		}
@@ -307,19 +295,15 @@ public class TopBarView extends RelativeLayout implements OnClickListener {
 
 	/**
 	 * 设置右边第一个菜单可见性,文本按钮，有两个菜单时务必要将hasTwoMenu 设置为true
-	 *
 	 * @param visiable
 	 * @param text
 	 */
 	public void setRightMenuOneVisiable(boolean visiable, String text,
 										int color, boolean hasTwoMenu) {
-
 		if (rightMenuLayout == null)
 			return;
-
 		if (visiable) {
 			rightMenuLayout.setVisibility(View.VISIBLE);
-
 			submenurightOneText.setVisibility(View.VISIBLE);
 			submenurightOneImage.setVisibility(View.INVISIBLE);
 			if (!hasTwoMenu) {
@@ -329,14 +313,11 @@ public class TopBarView extends RelativeLayout implements OnClickListener {
 				submenurightTwoImage.setVisibility(View.INVISIBLE);
 				submenurightTwoText.setVisibility(View.INVISIBLE);
 			}
-
 			ImageView imageView = (ImageView) rightMenuLayout
 					.findViewById(R.id.sub_menu_one_right_image);
-
 			submenurightOneText.setText(text);
 			submenurightOneText.setTextColor(getResources().getColor(color));
 			imageView.setVisibility(View.INVISIBLE);
-
 		} else {
 			submenurightOneImage.setVisibility(View.GONE);
 			submenurightOneText.setVisibility(View.GONE);
@@ -347,28 +328,21 @@ public class TopBarView extends RelativeLayout implements OnClickListener {
 
 	/**
 	 * 设置右边第二个菜单可见性,文本按钮，务必先添加第一个菜单
-	 *
 	 * @param visiable
 	 * @param text
 	 */
 	public void setRightMenuTwoVisiable(boolean visiable, String text, int color) {
-
 		if (rightMenuLayout == null)
 			return;
-
 		if (visiable) {
 			rightMenuLayout.setVisibility(View.VISIBLE);
-
 			submenurightTwoText.setVisibility(View.VISIBLE);
 			submenurightTwoImage.setVisibility(View.INVISIBLE);
-
 			ImageView imageView = (ImageView) rightMenuLayout
 					.findViewById(R.id.sub_menu_two_right_image);
-
 			submenurightTwoText.setText(text);
 			submenurightTwoText.setTextColor(getResources().getColor(color));
 			imageView.setVisibility(View.INVISIBLE);
-
 		} else {
 			submenurightTwoImage.setVisibility(View.GONE);
 			submenurightTwoText.setVisibility(View.GONE);
@@ -377,23 +351,17 @@ public class TopBarView extends RelativeLayout implements OnClickListener {
 
 	/**
 	 * 设置右边第一个菜单可见性,图标按钮，有两个菜单时务必要将hasTwoMenu 设置为true
-	 *
-	 *
 	 * @param visiable
 	 * @param text
 	 */
 	public void setRightMenuOneVisiable(boolean visiable, int imgRes,
 										boolean hasTwoMenu) {
-
 		if (rightMenuLayout == null)
 			return;
-
 		if (visiable) {
 			rightMenuLayout.setVisibility(View.VISIBLE);
-
 			submenurightOneText.setVisibility(View.INVISIBLE);
 			submenurightOneImage.setVisibility(View.VISIBLE);
-
 			if (!hasTwoMenu) {
 				submenurightTwoImage.setVisibility(View.GONE);
 				submenurightTwoText.setVisibility(View.GONE);
@@ -401,13 +369,10 @@ public class TopBarView extends RelativeLayout implements OnClickListener {
 				submenurightTwoImage.setVisibility(View.INVISIBLE);
 				submenurightTwoText.setVisibility(View.INVISIBLE);
 			}
-
 			ImageView imageView = (ImageView) rightMenuLayout
 					.findViewById(R.id.sub_menu_one_right_image);
-
 			imageView.setVisibility(View.VISIBLE);
 			imageView.setImageResource(imgRes);
-
 		} else {
 			submenurightOneImage.setVisibility(View.GONE);
 			submenurightOneText.setVisibility(View.GONE);
@@ -418,29 +383,21 @@ public class TopBarView extends RelativeLayout implements OnClickListener {
 
 	/**
 	 * 设置右边第二个菜单可见性,图标按钮，务必先添加第一个菜单
-	 *
 	 * @param visiable
 	 * @param text
 	 */
 	public void setRightMenuTwoVisiable(boolean visiable, int imgRes) {
-
 		if (rightMenuLayout == null)
 			return;
-
 		if (visiable) {
 			rightMenuLayout.setVisibility(View.VISIBLE);
-
 			submenurightTwoText.setVisibility(View.INVISIBLE);
 			submenurightTwoImage.setVisibility(View.VISIBLE);
-
 			ImageView imageView = (ImageView) rightMenuLayout
 					.findViewById(R.id.sub_menu_two_right_image);
-
 			imageView.setVisibility(View.VISIBLE);
 			imageView.setImageResource(imgRes);
-
 		} else {
-
 			submenurightTwoImage.setVisibility(View.GONE);
 			submenurightTwoText.setVisibility(View.GONE);
 		}
@@ -448,23 +405,16 @@ public class TopBarView extends RelativeLayout implements OnClickListener {
 
 	/**
 	 * 红点移动到某个位置
-	 *
-	 * @param index
-	 *            位置索引
+	 * @param index 位置索引
 	 */
 	public void dotMoveToPosition(int index) {
-
 		if (itemContainer != null) {
-
 			for (int i = 0; i < itemContainer.getChildCount(); i++) {
 				View view = itemContainer.getChildAt(i);
-//				ImageView itemDot = (ImageView) view
-//						.findViewById(R.id.item_dot);
 				TextView itemTitle = (TextView) view
 						.findViewById(R.id.item_text);
 				if (i != index) {
-					itemTitle
-							.setTextColor(mContext
+					itemTitle.setTextColor(mContext
 									.getResources()
 									.getColor(R.color.text_main));
 					TextPaint tpaint = itemTitle.getPaint();
@@ -487,7 +437,6 @@ public class TopBarView extends RelativeLayout implements OnClickListener {
 	}
 
 	public void onTitleItemClick(int position) {
-
 		if (currentPosition == position) {
 			return;
 		} else {
@@ -517,10 +466,8 @@ public class TopBarView extends RelativeLayout implements OnClickListener {
 				if (listener != null)
 					listener.onLeftMenuClick();
 				break;
-
 			// 右边第一个button点击
 			case R.id.sub_menu_one_right_text:
-
 				if (listener != null) {
 					listener.onRightMenuOneClick();
 				}
@@ -536,7 +483,6 @@ public class TopBarView extends RelativeLayout implements OnClickListener {
 					listener.onRightMenuTwoClick();
 				}
 				break;
-
 			case R.id.right_menu_two_img:
 				if (listener != null) {
 					listener.onRightMenuTwoClick();
