@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg_main">#FFFCFCFC</color>
+    <color name="hariline">#BFBFBF</color>
+    <color name="text_main">#333333</color>
+    <color name="red_main">#ff524f</color>
+     <color name="white">#FFFFFF</color>
+     <color name="black">#000000</color>
+</resources>
