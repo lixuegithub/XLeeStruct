@@ -12,6 +12,7 @@ import android.view.animation.Interpolator;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Scroller;
+import android.widget.Toast;
 
 import com.snow.structxlee.R;
 import com.snow.structxlee.base.BaseCommWithTopBar;
@@ -46,9 +47,11 @@ public class IntervalActivity extends BaseCommWithTopBar {
     protected void onCreate(Bundle arg0) {
         super.onCreate(arg0);
         setContentView(R.layout.activity_interval);
-        mViewPager  =(ViewPager)findViewById(R.id.viewpager);
-        btn_start_loop  =(Button)findViewById(R.id.btn_start_loop);
-        btn_stop_loop  =(Button)findViewById(R.id.btn_stop_loop);
+        initView();
+        initEvent();
+        initViewPager();
+    }
+    private void initEvent() {
         btn_start_loop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -63,16 +66,18 @@ public class IntervalActivity extends BaseCommWithTopBar {
                 }
             }
         });
-        initViewPager();
     }
 
-
+    private void initView() {
+        mViewPager  =(ViewPager)findViewById(R.id.viewpager);
+        btn_start_loop  =(Button)findViewById(R.id.btn_start_loop);
+        btn_stop_loop  =(Button)findViewById(R.id.btn_stop_loop);
+    }
 
     private void autoLoop() {
         if (subscribe_auto == null || subscribe_auto.isUnsubscribed()) {
             subscribe_auto = Observable.interval(3000, 3000, TimeUnit.MILLISECONDS)
                     //延时3000 ，每间隔3000，时间单位
-                    // 延时3000 ，每间隔3000，时间单位
                     //.compose(this.<Long>bindToLifecycle())
                     .observeOn(AndroidSchedulers.mainThread())
                     .subscribe(new Action1<Long>() {
@@ -92,7 +97,12 @@ public class IntervalActivity extends BaseCommWithTopBar {
     private void initViewPager() {
         loopAdapter = new PicLoopAdapter(DATAS);
         mViewPager.setAdapter(loopAdapter);
-
+        mViewPager.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(IntervalActivity.this,"toast.."+mViewPager.getCurrentItem(),Toast.LENGTH_SHORT).show();
+            }
+        });
         try {
             //自定义滑动速度
             Field mScrollerField = ViewPager.class.getDeclaredField("mScroller");

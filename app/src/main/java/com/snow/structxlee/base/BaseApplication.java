@@ -1,19 +1,17 @@
 package com.snow.structxlee.base;
 
-import java.lang.Thread.UncaughtExceptionHandler;
-
 import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.DisplayMetrics;
 import android.view.WindowManager;
 
+import java.lang.Thread.UncaughtExceptionHandler;
+
 public class BaseApplication extends Application {
 	public static  BaseApplication myApplication = null;
 	public static Context context;
 	SharedPreferences sharedPreferences;
-
-	
 
 	public static BaseApplication getInstance() {
 		if (myApplication == null) {

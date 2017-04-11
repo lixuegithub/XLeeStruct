@@ -9,14 +9,16 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import com.snow.structxlee.base.BaseFragment;
 import com.snow.structxlee.bean.BasicInteractTab;
 import com.snow.structxlee.fragment.AllOrderFragment;
+import com.snow.structxlee.fragment.CitySelectorFragment;
 
 public class OrderActivityAdapter extends FragmentPagerAdapter {
 	private List<? extends BasicInteractTab> mTitles = new ArrayList<BasicInteractTab>();
 	private Context mContext;
 	private Fragment all = null;
-	private Fragment for_payment = null;
+	private Fragment cityFragment = null;
 	private Fragment wait_send_goods = null;
 	private Fragment wait_for_goods = null;
 	private Fragment return_of = null;
@@ -31,7 +33,7 @@ public class OrderActivityAdapter extends FragmentPagerAdapter {
 		this.mTitles = titles;
 		this.mContext = context;
 		all = new AllOrderFragment(mContext);
-		for_payment = new AllOrderFragment(mContext);
+		cityFragment = new CitySelectorFragment(mContext);
 		wait_send_goods = new AllOrderFragment(mContext);
 		wait_for_goods = new AllOrderFragment(mContext);
 		return_of = new AllOrderFragment(mContext);
@@ -48,7 +50,7 @@ public class OrderActivityAdapter extends FragmentPagerAdapter {
 					fragment=all;
 					break;
 				case BasicInteractTab.TabType.TYPE_FOR_PAYMENT:
-					fragment=for_payment;
+					fragment=cityFragment;
 					break;
 				case BasicInteractTab.TabType.TYPE_WAIT_SEND_GOODS:
 					fragment=wait_send_goods;
