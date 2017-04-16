@@ -9,6 +9,7 @@ import android.widget.Button;
 
 import com.snow.structxlee.activity.AsyncActivity;
 import com.snow.structxlee.activity.IntervalActivity;
+import com.snow.structxlee.activity.OkhttpActivity;
 import com.snow.structxlee.activity.OrderActivity;
 import com.snow.structxlee.activity.SelectPhotoActivity;
 import com.snow.structxlee.activity.TestSingleTaskActivity;
@@ -25,11 +26,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		Button btnSelectPhoto = (Button) findViewById(R.id.btn_select_photo);
 		Button btnTestSingletask = (Button) findViewById(R.id.btn_test_singletask);
 		Button btnOkhttpDownLoadImg = (Button) findViewById(R.id.btn_test_okhttp_download_img);
+		Button btnTestOkhttp = (Button) findViewById(R.id.btn_test_okhttp);
 		btnTabColor.setOnClickListener(this);
 		btnViewPagerRx.setOnClickListener(this);
 		btnSelectPhoto.setOnClickListener(this);
 		btnTestSingletask.setOnClickListener(this);
 		btnOkhttpDownLoadImg.setOnClickListener(this);
+		btnTestOkhttp.setOnClickListener(this);
 	}
 
 	@Override
@@ -54,6 +57,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
 				break;
 			case  R.id.btn_test_okhttp_download_img:
 				intent = new Intent(MainActivity.this, AsyncActivity.class);
+				startActivity(intent);
+				break;
+			case  R.id.btn_test_okhttp:
+				intent = new Intent(MainActivity.this, OkhttpActivity.class);
 				startActivity(intent);
 				break;
 			default:

@@ -44,4 +44,12 @@
         android:padding="3dp"
         android:text="Test OkHttp download Img !"
         android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btn_test_okhttp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:text="Test OkHttp"
+        android:textSize="18sp" />
 </LinearLayout>
