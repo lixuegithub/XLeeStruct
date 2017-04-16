@@ -14,7 +14,6 @@ import android.widget.ImageView;
 
 import com.snow.structxlee.R;
 import com.snow.structxlee.util.CropSquareTrans;
-import com.snow.structxlee.util.OkManager;
 
 import org.json.JSONObject;
 

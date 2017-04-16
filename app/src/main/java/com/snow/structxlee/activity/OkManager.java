@@ -1,9 +1,11 @@
-package com.snow.structxlee.util;
+package com.snow.structxlee.activity;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Handler;
 import android.os.Looper;
+
+import com.snow.structxlee.util.CropSquareTrans;
 
 import org.json.JSONObject;
 
