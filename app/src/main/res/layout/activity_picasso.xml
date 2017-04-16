@@ -2,8 +2,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/listView"/>
 
     <ImageView
         android:id="@+id/imageView"
@@ -12,10 +17,9 @@
         android:src="@mipmap/ic_launcher"/>
 
     <Button
-        android:text="Button"
+        android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="createMethod"
-        android:id="@+id/button" />
-
+        android:text="简单的picasso_Download图片" />
 </LinearLayout>

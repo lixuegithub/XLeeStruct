@@ -52,4 +52,11 @@
         android:padding="3dp"
         android:text="Test OkHttp"
         android:textSize="18sp" />
+    <Button
+        android:id="@+id/btn_test_rxJava"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:text="Test RxJava"
+        android:textSize="18sp" />
 </LinearLayout>

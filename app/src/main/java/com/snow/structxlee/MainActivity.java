@@ -11,6 +11,7 @@ import com.snow.structxlee.activity.AsyncActivity;
 import com.snow.structxlee.activity.IntervalActivity;
 import com.snow.structxlee.activity.OkhttpActivity;
 import com.snow.structxlee.activity.OrderActivity;
+import com.snow.structxlee.activity.RxActivity;
 import com.snow.structxlee.activity.SelectPhotoActivity;
 import com.snow.structxlee.activity.TestSingleTaskActivity;
 
@@ -61,6 +62,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
 				break;
 			case  R.id.btn_test_okhttp:
 				intent = new Intent(MainActivity.this, OkhttpActivity.class);
+				startActivity(intent);
+				break;
+			case  R.id.btn_test_rxJava:
+				intent = new Intent(MainActivity.this, RxActivity.class);
 				startActivity(intent);
 				break;
 			default:
