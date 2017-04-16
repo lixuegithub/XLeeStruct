@@ -21,6 +21,7 @@
         <activity android:name=".activity.IntervalActivity"/>
         <activity android:name=".activity.SelectPhotoActivity"/>
         <activity android:name=".activity.TestSingleTaskActivity"/>
+        <activity android:name=".activity.AsyncActivity"/>
     </application>
 
 </manifest>

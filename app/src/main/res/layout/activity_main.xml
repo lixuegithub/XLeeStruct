@@ -20,6 +20,7 @@
         android:padding="3dp"
         android:text="Test RxJavaImpSlide !"
         android:textSize="18sp" />
+
     <Button
         android:id="@+id/btn_select_photo"
         android:layout_width="match_parent"
@@ -27,11 +28,20 @@
         android:padding="3dp"
         android:text="Test SelectPhoto !"
         android:textSize="18sp" />
+
     <Button
         android:id="@+id/btn_test_singletask"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="3dp"
         android:text="Test SingleTask !"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btn_test_okhttp_download_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:text="Test OkHttp download Img !"
         android:textSize="18sp" />
 </LinearLayout>

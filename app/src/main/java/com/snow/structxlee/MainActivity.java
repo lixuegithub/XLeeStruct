@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.snow.structxlee.activity.AsyncActivity;
 import com.snow.structxlee.activity.IntervalActivity;
 import com.snow.structxlee.activity.OrderActivity;
 import com.snow.structxlee.activity.SelectPhotoActivity;
@@ -23,10 +24,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		Button btnViewPagerRx = (Button) findViewById(R.id.btn_viewPagerRx);
 		Button btnSelectPhoto = (Button) findViewById(R.id.btn_select_photo);
 		Button btnTestSingletask = (Button) findViewById(R.id.btn_test_singletask);
+		Button btnOkhttpDownLoadImg = (Button) findViewById(R.id.btn_test_okhttp_download_img);
 		btnTabColor.setOnClickListener(this);
 		btnViewPagerRx.setOnClickListener(this);
 		btnSelectPhoto.setOnClickListener(this);
 		btnTestSingletask.setOnClickListener(this);
+		btnOkhttpDownLoadImg.setOnClickListener(this);
 	}
 
 	@Override
@@ -47,6 +50,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
 				break;
 			case  R.id.btn_test_singletask:
 				intent = new Intent(MainActivity.this, TestSingleTaskActivity.class);
+				startActivity(intent);
+				break;
+			case  R.id.btn_test_okhttp_download_img:
+				intent = new Intent(MainActivity.this, AsyncActivity.class);
 				startActivity(intent);
 				break;
 			default:
