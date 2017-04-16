@@ -19,6 +19,9 @@ import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Test TabColorPageIndicator 
+ */
 public class OrderActivity extends BaseCommWithTopBar {
 	private TopBarView topBarView;
 	private Context context;

@@ -23,7 +23,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-
+/**
+ * Test SingleTask 启动模式
+ */
 public class TestSingleTaskActivity extends BaseCommWithTopBar {
 
     @Override

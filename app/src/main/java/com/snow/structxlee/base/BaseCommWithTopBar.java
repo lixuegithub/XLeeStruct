@@ -14,6 +14,9 @@ import com.snow.structxlee.R;
 import com.snow.structxlee.comm.TopBarView;
 import com.snow.structxlee.util.ActivityUtils;
 
+/**
+ * 封装实现头部View实现
+ */
 public class BaseCommWithTopBar extends FragmentActivity  implements TopBarView.TopBarViewListener {
 
 	protected String activityTag;

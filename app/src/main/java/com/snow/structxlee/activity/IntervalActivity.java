@@ -30,7 +30,7 @@ import rx.functions.Action1;
 import rx.schedulers.Schedulers;
 
 /**
- * Created by XLee 图片轮询
+ * Created by XLee  RxJava imp 图片轮询
  */
 
 public class IntervalActivity extends BaseCommWithTopBar {

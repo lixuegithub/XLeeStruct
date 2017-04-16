@@ -21,16 +21,11 @@ import com.snow.structxlee.util.ScreenUtils;
 
 /**
  * 自定义头部实现
- * @author xLee
- *
  */
 public class TopBarView extends RelativeLayout implements OnClickListener {
 
 	/**
 	 * 自定义view点击事件回调
-	 *
-	 * @author WANGGUODONG
-	 *
 	 */
 	public interface TopBarViewListener {
 		public void onLeftMenuClick();
@@ -70,8 +65,7 @@ public class TopBarView extends RelativeLayout implements OnClickListener {
 	 *
 	 * @param context
 	 * @param attrs
-	 * @param item
-	 *            中间title的数组
+	 * @param  中间title的数组
 	 */
 	public TopBarView(Context context, AttributeSet attrs) {
 
@@ -119,7 +113,6 @@ public class TopBarView extends RelativeLayout implements OnClickListener {
 
 	/**
 	 * 设置topbar的标题 此方法无法设置可以滚动的标题栏
-	 *
 	 * @param title
 	 */
 	public void setTitle(String title) {
@@ -132,7 +125,6 @@ public class TopBarView extends RelativeLayout implements OnClickListener {
 
 	/**
 	 * 设置主题
-	 *
 	 * @param theme
 	 */
 	public void setTopBarTheme(String theme) {
@@ -142,7 +134,6 @@ public class TopBarView extends RelativeLayout implements OnClickListener {
 
 	/**
 	 * 获得主题
-	 *
 	 * @return
 	 */
 	public String getTopbarTheme() {
@@ -154,7 +145,6 @@ public class TopBarView extends RelativeLayout implements OnClickListener {
 
 		if (itemContainer == null)
 			return;
-
 		itemContainer.removeAllViews();
 		// 测量左右菜单
 		leftMenuLayout.measure(View.MeasureSpec.makeMeasureSpec(0,

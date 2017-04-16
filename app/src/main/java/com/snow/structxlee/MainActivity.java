@@ -12,7 +12,7 @@ import com.snow.structxlee.activity.OrderActivity;
 import com.snow.structxlee.activity.SelectPhotoActivity;
 import com.snow.structxlee.activity.TestSingleTaskActivity;
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements View.OnClickListener {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -23,34 +23,35 @@ public class MainActivity extends Activity {
 		Button btnViewPagerRx = (Button) findViewById(R.id.btn_viewPagerRx);
 		Button btnSelectPhoto = (Button) findViewById(R.id.btn_select_photo);
 		Button btnTestSingletask = (Button) findViewById(R.id.btn_test_singletask);
-		btnTabColor.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				Intent intent = new Intent (MainActivity.this, OrderActivity.class);
+		btnTabColor.setOnClickListener(this);
+		btnViewPagerRx.setOnClickListener(this);
+		btnSelectPhoto.setOnClickListener(this);
+		btnTestSingletask.setOnClickListener(this);
+	}
+
+	@Override
+	public void onClick(View v) {
+		Intent intent =null;
+		switch (v.getId()){
+			case  R.id.btn_tabColorPagerIndicator:
+				intent = new Intent (MainActivity.this, OrderActivity.class);
 				startActivity(intent);
-			}
-		});
-		btnViewPagerRx.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				Intent intent = new Intent (MainActivity.this, IntervalActivity.class);
+				break;
+			case  R.id.btn_viewPagerRx:
+				intent = new Intent (MainActivity.this, IntervalActivity.class);
 				startActivity(intent);
-			}
-		});
-		btnSelectPhoto.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				Intent intent = new Intent (MainActivity.this, SelectPhotoActivity.class);
+				break;
+			case  R.id.btn_select_photo:
+				intent = new Intent (MainActivity.this, SelectPhotoActivity.class);
 				startActivity(intent);
-			}
-		});
-		btnTestSingletask.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				Intent intent = new Intent(MainActivity.this, TestSingleTaskActivity.class);
+				break;
+			case  R.id.btn_test_singletask:
+				intent = new Intent(MainActivity.this, TestSingleTaskActivity.class);
 				startActivity(intent);
-			}
-		});
+				break;
+			default:
+				break;
+		}
 	}
 
 	@Override
@@ -98,4 +99,6 @@ public class MainActivity extends Activity {
 		super.onNewIntent(intent);
 		Log.e("xlee","onNewIntent:"+intent.getStringExtra("data"));
 	}
+
+
 }
