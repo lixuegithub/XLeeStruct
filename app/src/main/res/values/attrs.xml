@@ -16,4 +16,11 @@
         <attr name="vpiUnderlinePageIndicatorStyle" format="reference" />
     </declare-styleable>
 
+    <declare-styleable name="LoginEditTextStyle">
+        <attr name="deleteDrawable" format="reference"/>
+        <attr name="visibleDrawable" format="reference"/>
+        <attr name="iconDrawable" format="reference"/>
+        <attr name="passwordTag" format="boolean"/>
+    </declare-styleable>
+
 </resources>

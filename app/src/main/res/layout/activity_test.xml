@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <ImageView
+            android:id="@+id/drawbleIconView"
+            style="@style/query_imageView_style_18"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/icon_yonghuming" />
+
+        <EditText
+            android:id="@+id/editText"
+            style="@style/clearEdit_login"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:hint="请输入密码"
+            android:inputType="textPassword" />
+
+        <ImageView
+            android:id="@+id/drawbleDeleteView"
+            style="@style/query_imageView_style_18"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/icon_shanchu" />
+
+        <ImageView
+            android:id="@+id/drawbleVisableView"
+            style="@style/query_imageView_style_18"
+            android:src="@mipmap/icon_yanjingkai" />
+    </LinearLayout>
+</com.zhy.autolayout.AutoLinearLayout>
