@@ -4,7 +4,10 @@ import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.WindowManager;
+
+import com.snow.structxlee.util.SharedPreferencesUtils;
 
 import java.lang.Thread.UncaughtExceptionHandler;
 
@@ -29,6 +32,8 @@ public class BaseApplication extends Application {
 		super.onCreate();
 		context = getApplicationContext();
 		myApplication = this;
+		SharedPreferencesUtils.setParam(getApplicationContext(),"user","我是测试用户名的...");
+		Log.e("xlee","reader sp "+SharedPreferencesUtils.getParam(getApplicationContext(),"user",""));
 	}
 
 	// 创建服务用于捕获崩溃异常
