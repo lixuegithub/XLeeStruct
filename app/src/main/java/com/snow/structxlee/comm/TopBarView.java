@@ -65,7 +65,6 @@ public class TopBarView extends RelativeLayout implements OnClickListener {
 	 *
 	 * @param context
 	 * @param attrs
-	 * @param  中间title的数组
 	 */
 	public TopBarView(Context context, AttributeSet attrs) {
 
@@ -231,7 +230,6 @@ public class TopBarView extends RelativeLayout implements OnClickListener {
 
 	/**
 	 * 设置topbar的标题 此方法设置可以滚动的标题栏
-	 * @param title
 	 */
 	public void setTitleItem(List<String> titleItem) {
 		if(titleItem!=null)
@@ -342,7 +340,6 @@ public class TopBarView extends RelativeLayout implements OnClickListener {
 	/**
 	 * 设置右边第一个菜单可见性,图标按钮，有两个菜单时务必要将hasTwoMenu 设置为true
 	 * @param visiable
-	 * @param text
 	 */
 	public void setRightMenuOneVisiable(boolean visiable, int imgRes,
 										boolean hasTwoMenu) {
@@ -374,7 +371,6 @@ public class TopBarView extends RelativeLayout implements OnClickListener {
 	/**
 	 * 设置右边第二个菜单可见性,图标按钮，务必先添加第一个菜单
 	 * @param visiable
-	 * @param text
 	 */
 	public void setRightMenuTwoVisiable(boolean visiable, int imgRes) {
 		if (rightMenuLayout == null)
