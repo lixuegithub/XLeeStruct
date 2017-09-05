@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimen_64"
+    android:layout_alignParentBottom="true"
+    android:layout_marginBottom="@dimen/dimen_15"
+    android:layout_marginLeft="@dimen/dimen_20"
+    android:layout_marginRight="@dimen/dimen_20"
+    android:layout_marginTop="@dimen/dimen_20"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginRight="@dimen/dimen_20"
+        android:layout_weight="1"
+        android:background="@color/pink"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/pink"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/dimen_20"
+            android:textColor="@color/default_text_black"
+            android:textSize="@dimen/dimen_24" />
+
+        <LinearLayout
+            android:id="@+id/ll_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="25px"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/dimen_24"
+                android:layout_height="@dimen/dimen_24"
+                android:src="@mipmap/susuo" />
+
+            <TextView
+                android:id="@+id/tv_hint"
+                style="@style/font_style_shallgray_22"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:hint="请输入手机号码或姓名" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/clear"
+            android:layout_width="@dimen/dimen_28"
+            android:layout_height="@dimen/dimen_28"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
+            android:layout_marginRight="@dimen/dimen_20"
+            android:src="@mipmap/login_closs" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_search"
+        style="@style/font_style_shallgray_26"
+        android:layout_width="wrap_content"
+        android:layout_height="50px"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/button_shape"
+        android:paddingBottom="@dimen/dimen_10"
+        android:paddingLeft="@dimen/dimen_20"
+        android:paddingRight="@dimen/dimen_20"
+        android:paddingTop="@dimen/dimen_10"
+        android:text="搜索" />
+
+</LinearLayout>
+

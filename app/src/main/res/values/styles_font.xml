@@ -1,0 +1,13 @@
+<resources>
+
+    <!--字体相关样式-->
+    <style name="font_style_shallgray_22">
+        <item name="android:textColor">@color/shall_gray</item>
+        <item name="android:textSize">@dimen/dimen_22</item>
+    </style>
+
+    <style name="font_style_shallgray_26">
+        <item name="android:textColor">@color/shall_gray</item>
+        <item name="android:textSize">@dimen/dimen_26</item>
+    </style>
+</resources>

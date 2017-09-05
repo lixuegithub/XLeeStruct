@@ -23,4 +23,14 @@
     <dimen name="custom_top_bar_menu_image_width">24dp</dimen>
     <dimen name="custom_top_bar_menu_image_height">24dp</dimen>
     <dimen name="stSize18">16.0sp</dimen>
+
+    <!--dimen  px-->
+    <dimen name="dimen_10">10px</dimen>
+    <dimen name="dimen_15">15px</dimen>
+    <dimen name="dimen_20">20px</dimen>
+    <dimen name="dimen_22">22px</dimen>
+    <dimen name="dimen_24">24px</dimen>
+    <dimen name="dimen_26">26px</dimen>
+    <dimen name="dimen_28">28px</dimen>
+    <dimen name="dimen_64">64px</dimen>
 </resources>
