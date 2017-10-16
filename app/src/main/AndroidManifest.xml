@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.snow.structxlee">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name=".base.BaseApplication"
@@ -12,17 +12,19 @@
         android:supportsRtl="true"
         android:theme="@android:style/Theme.Light.NoTitleBar">
         <activity android:name=".MainActivity">
+        </activity>
+        <activity android:name=".activity.OrderActivity" />
+        <activity android:name=".activity.IntervalActivity" />
+        <activity android:name=".activity.SelectPhotoActivity" />
+        <activity android:name=".activity.TestSingleTaskActivity" />
+        <activity android:name=".activity.AsyncActivity" />
+        <activity android:name=".activity.OkhttpActivity" />
+        <activity android:name=".activity.CustomAct">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.OrderActivity"/>
-        <activity android:name=".activity.IntervalActivity"/>
-        <activity android:name=".activity.SelectPhotoActivity"/>
-        <activity android:name=".activity.TestSingleTaskActivity"/>
-        <activity android:name=".activity.AsyncActivity"/>
-        <activity android:name=".activity.OkhttpActivity"/>
     </application>
 
 </manifest>
